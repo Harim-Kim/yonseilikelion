@@ -2,8 +2,24 @@
 	color:orange;
 }
 .nav_name a:hover, .nav_name a:focus {
-  text-decoration: none;
+  text-decoration: none !important;
 }
-a {
-    text-decoration: none !important;
+
+.log-in{
+	text-align: center;
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+	padding: 1.5rem;
+	width: 350px;
+}
+.left-text{
+	text-align:left;
+}
+.header-yonsei-image{
+	width:10%;
+	height:10%;
+}
+.inline {
+  display: inline-block;
 }
