@@ -1,0 +1,2 @@
+class LoadAndAuthorizeResourceController < ApplicationController
+end

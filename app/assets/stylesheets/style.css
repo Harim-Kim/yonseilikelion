@@ -4,6 +4,9 @@
 .nav_name a:hover, .nav_name a:focus {
   text-decoration: none !important;
 }
+a {
+	text-decoration: none !important;
+}
 
 .log-in{
 	text-align: center;
@@ -13,7 +16,7 @@
 	padding: 1.5rem;
 	width: 350px;
 }
-.left-text{
+.login-text{
 	text-align:left;
 }
 .header-yonsei-image{
