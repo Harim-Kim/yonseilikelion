@@ -1,0 +1,11 @@
+<h1>숙제내는 페이지</h1>
+<div class="container">
+  <form action="/changmin/upload_assign" method="post" enctype="multipart/form-data">
+    제목 <input type="text" name="title"class="form-control"><br>
+    내용 <textarea rows="4" class="form-control" type="text" name="content"></textarea><br>
+     <input type="file" name="pic" accept="image/*">
+     <input name="as_type" type="hidden" value="homework">
+     <input name="as_num" type="hidden" value="<%=Assignment.where(as_type: "homework").length%>">
+    <input type="submit" value="Submit">
+  </form>
+</div>

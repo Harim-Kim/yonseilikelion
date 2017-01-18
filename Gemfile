@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem "fog-aws"
+gem 'carrierwave'
+
 gem 'devise'
 gem 'rails_admin'
 gem 'remotipart', github: 'mshibuya/remotipart'
