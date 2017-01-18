@@ -1,15 +1,17 @@
 class ChangminController < ApplicationController
+  before_action :need_login
+  
+  
   def board
     @everypost = Post.all
   end
   
   def assignment
     @num = params[:num]
-    @aa = Assignment.where(assignment_num: @num.to_i,
-                           as_type: "homework").first #n차숙제
+    @aa = Homework.find(@num) #n차숙제
     @submission = Assignment.where(assignment_num: @num,
-                                   user_id: current_user.id).length
-    @assignments = Assignment.where(assignment_num: @num, as_type: "submission")
+                                   user_id: current_user.id)
+    @assignments = Assignment.where(assignment_num: @num)
   end
   
   def detail
@@ -18,10 +20,8 @@ class ChangminController < ApplicationController
   
   
   def upload_assign
-    img_post = Assignment.create(title: params[:title], 
+    img_post = Homework.create(title: params[:title], 
                           content: params[:content],
-                          as_type: params[:as_type],
-                          assignment_num: params[:as_num].to_i+1,
                           user_id: current_user.id)
     my_file = params[:pic]
     uploader = YonseiUploader.new
@@ -34,7 +34,7 @@ class ChangminController < ApplicationController
   #숙제 올리기
   
   def assignments
-    @assignments = Assignment.where(as_type: "homework").reverse
+    @hw = Homework.all.reverse
   end
   
   

@@ -1,9 +1,9 @@
 <div class="row container">
-    <% @assignments.each do |a|%>
+    <% @hw.each do |h|%>
       <div class="col-xs-6 col-md-3" style="height:300px;" class="thumbnail">
-          <%=a.title%><br>
-          <img class="img_list" src="<%=a.img_url%>"><br>
-      <a href="/changmin/assignment/<%=a.id%>">제출하기</a>
+          <%=h.title%><br>
+          <img class="img_list" src="<%=h.img_url%>"><br>
+      <a href="/changmin/assignment/<%=h.id%>">제출하기</a>
       </div>
     <% end %>
 </div>

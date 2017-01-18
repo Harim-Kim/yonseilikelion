@@ -1,6 +1,6 @@
 <h1><%=@aa.title%></h1>
 
-<% unless @submission == 0 %>
+<% unless @submission.length == 0 %>
   <div class="container">
     <% @assignments.all.each do |a| %>
         <div class="col-xs-6 col-md-3 floating-box" style="height:500px">
